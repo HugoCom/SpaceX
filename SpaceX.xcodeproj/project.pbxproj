@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A33653922F0D69400B91EA8 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33653822F0D69400B91EA8 /* Mission.swift */; };
+		9A06542622F0DE2F00B5956C /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06542522F0DE2F00B5956C /* Core.swift */; };
+		9A33653922F0D69400B91EA8 /* DetailMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33653822F0D69400B91EA8 /* DetailMission.swift */; };
 		9AC30DD522F0C4CE00FF436E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC30DD422F0C4CE00FF436E /* AppDelegate.swift */; };
 		9AC30DD722F0C4CE00FF436E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC30DD622F0C4CE00FF436E /* FirstViewController.swift */; };
 		9AC30DD922F0C4CE00FF436E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC30DD822F0C4CE00FF436E /* SecondViewController.swift */; };
@@ -38,7 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9A33653822F0D69400B91EA8 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		9A06542522F0DE2F00B5956C /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		9A33653822F0D69400B91EA8 /* DetailMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMission.swift; sourceTree = "<group>"; };
 		9AC30DD122F0C4CE00FF436E /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC30DD422F0C4CE00FF436E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC30DD622F0C4CE00FF436E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				9AC30E0722F0CD6100FF436E /* Capsule.swift */,
-				9A33653822F0D69400B91EA8 /* Mission.swift */,
+				9A33653822F0D69400B91EA8 /* DetailMission.swift */,
+				9A06542522F0DE2F00B5956C /* Core.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,9 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A33653922F0D69400B91EA8 /* Mission.swift in Sources */,
+				9A33653922F0D69400B91EA8 /* DetailMission.swift in Sources */,
 				9AC30DD922F0C4CE00FF436E /* SecondViewController.swift in Sources */,
 				9AC30E0822F0CD6100FF436E /* Capsule.swift in Sources */,
+				9A06542622F0DE2F00B5956C /* Core.swift in Sources */,
 				9AC30DD522F0C4CE00FF436E /* AppDelegate.swift in Sources */,
 				9AC30E0522F0C9BA00FF436E /* ThirdViewController.swift in Sources */,
 				9AC30DD722F0C4CE00FF436E /* FirstViewController.swift in Sources */,

@@ -13,13 +13,13 @@ public struct Capsule: Codable, CustomStringConvertible {
         return "\(capsule_serial) | \(capsule_id) | \(status) | \(landings) | \(type)"
     }
     
-    let capsule_serial: String
-    let capsule_id: String
-    let status: String
-    let original_launch_unix: Int?
-    let missions: [Mission]
-    let landings: Int
-    let type: String
-    let details: String?
-    let reuse_count: Int
+    let capsule_serial: String //Capsule serial
+    let capsule_id: String //Capsule id
+    let status: String //Capsule status
+    let original_launch_unix: Int? //Capsule original launch unix time
+    let missions: [DetailMission]? //Capsule missions
+    let landings: Int //Capsule number of landings
+    let type: String //Capsule type
+    let details: String? //Capsule details
+    let reuse_count: Int //Number of time capsule was reused
 }
