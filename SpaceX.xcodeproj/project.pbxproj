@@ -19,6 +19,8 @@
 		9A8A86AA22F205FB00DED6D6 /* Trunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A86A922F205FB00DED6D6 /* Trunk.swift */; };
 		9A8A86AC22F2067100DED6D6 /* Cargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A86AB22F2067100DED6D6 /* Cargo.swift */; };
 		9A8A86AE22F2073600DED6D6 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A86AD22F2073600DED6D6 /* Length.swift */; };
+		9A8A86B222F22BBA00DED6D6 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A86B122F22BBA00DED6D6 /* History.swift */; };
+		9A8A86B422F22BCF00DED6D6 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A86B322F22BCF00DED6D6 /* Link.swift */; };
 		9AC30DD522F0C4CE00FF436E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC30DD422F0C4CE00FF436E /* AppDelegate.swift */; };
 		9AC30DD722F0C4CE00FF436E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC30DD622F0C4CE00FF436E /* FirstViewController.swift */; };
 		9AC30DD922F0C4CE00FF436E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC30DD822F0C4CE00FF436E /* SecondViewController.swift */; };
@@ -61,6 +63,8 @@
 		9A8A86A922F205FB00DED6D6 /* Trunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trunk.swift; sourceTree = "<group>"; };
 		9A8A86AB22F2067100DED6D6 /* Cargo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cargo.swift; sourceTree = "<group>"; };
 		9A8A86AD22F2073600DED6D6 /* Length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
+		9A8A86B122F22BBA00DED6D6 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		9A8A86B322F22BCF00DED6D6 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		9AC30DD122F0C4CE00FF436E /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC30DD422F0C4CE00FF436E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC30DD622F0C4CE00FF436E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				9A8A86A922F205FB00DED6D6 /* Trunk.swift */,
 				9A8A86AB22F2067100DED6D6 /* Cargo.swift */,
 				9A8A86AD22F2073600DED6D6 /* Length.swift */,
+				9A8A86B122F22BBA00DED6D6 /* History.swift */,
+				9A8A86B322F22BCF00DED6D6 /* Link.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8A86B222F22BBA00DED6D6 /* History.swift in Sources */,
 				9A8A86AA22F205FB00DED6D6 /* Trunk.swift in Sources */,
 				9A8A86A022F2035700DED6D6 /* Thruster.swift in Sources */,
 				9A8A86AC22F2067100DED6D6 /* Cargo.swift in Sources */,
@@ -323,6 +330,7 @@
 				9AC30DD522F0C4CE00FF436E /* AppDelegate.swift in Sources */,
 				9AC30E0522F0C9BA00FF436E /* ThirdViewController.swift in Sources */,
 				9A8A869E22F2026E00DED6D6 /* HeatShield.swift in Sources */,
+				9A8A86B422F22BCF00DED6D6 /* Link.swift in Sources */,
 				9A8A869C22F2014D00DED6D6 /* DragonCapsule.swift in Sources */,
 				9A8A86AE22F2073600DED6D6 /* Length.swift in Sources */,
 				9AC30DD722F0C4CE00FF436E /* FirstViewController.swift in Sources */,

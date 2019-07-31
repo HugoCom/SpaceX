@@ -16,6 +16,7 @@ public struct Core: Codable, CustomStringConvertible {
     let core_serial: String //Core serial
     let block: Int? //Core block number
     let status: String //Core status
+    let original_launch: String? //Core original launch time
     let original_launch_unix: Int? //Core original launch unix time
     let missions: [DetailMission] //Core mission
     let reuse_count: Int //Number of times the core was reused

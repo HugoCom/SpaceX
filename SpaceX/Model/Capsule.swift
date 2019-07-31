@@ -16,6 +16,7 @@ public struct Capsule: Codable, CustomStringConvertible {
     let capsule_serial: String //Capsule serial
     let capsule_id: String //Capsule id
     let status: String //Capsule status
+    let original_launch: String? //Capsule original launch time
     let original_launch_unix: Int? //Capsule original launch unix time
     let missions: [DetailMission] //Capsule missions
     let landings: Int //Capsule number of landings
