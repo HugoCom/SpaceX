@@ -17,7 +17,7 @@ public struct Core: Codable, CustomStringConvertible {
     let block: Int? //Core block number
     let status: String //Core status
     let original_launch_unix: Int? //Core original launch unix time
-    let missions: [DetailMission]? //Core mission
+    let missions: [DetailMission] //Core mission
     let reuse_count: Int //Number of times the core was reused
     let rtls_attempts: Int //Number of RLS attempted landings
     let rtls_landings: Int //Number of RTLS successful landings

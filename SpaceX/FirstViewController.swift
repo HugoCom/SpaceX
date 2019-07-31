@@ -9,39 +9,62 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    var callDone = 0
+    var numberOfCall = 3
     var capsules: [Capsule]?
     var cores: [Core]?
+    var dragonCapsules: [DragonCapsule]?
+
+    @IBOutlet weak var waitingProgress: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        waitingProgress.hidesWhenStopped = true
+
         apiCall()
     }
     
     fileprivate func apiCall() {
+        waitingProgress.startAnimating()
         guard let urlCapsule = URL(string: AppDelegate.init().APIBaseUrl + "capsules") else { return }
         guard let urlCore = URL(string: AppDelegate.init().APIBaseUrl + "cores") else { return }
+        guard let urlDragonCapsule = URL(string: AppDelegate.init().APIBaseUrl + "dragons") else { return }
 
-        let taskCapsule = URLSession.shared.dataTask(with: urlCapsule) { (data, resonse, error) in
+        let taskCapsule = URLSession.shared.dataTask(with: urlCapsule) { (data, response, error) in
             guard let data = data else { return }
             
             do {
                 let json = try JSONDecoder().decode([Capsule].self, from: data)
                 self.capsules = json
-                self.receiveCapsule()
+                self.isCallDone()
+                self.receiveCapsules()
             } catch {
                 print("error:\(error)")
             }
         }
         
-        let taskCore = URLSession.shared.dataTask(with: urlCore) { (data, resonse, error) in
+        let taskCore = URLSession.shared.dataTask(with: urlCore) { (data, response, error) in
             guard let data = data else { return }
             
             do {
                 let json = try JSONDecoder().decode([Core].self, from: data)
                 self.cores = json
-                self.receiveCore()
+                self.isCallDone()
+                self.receiveCores()
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        
+        let taskDragonCapsule = URLSession.shared.dataTask(with: urlDragonCapsule) { (data, response, error) in
+            guard let data = data else { return }
+            
+            do {
+                let json = try JSONDecoder().decode([DragonCapsule].self, from: data)
+                self.dragonCapsules = json
+                self.isCallDone()
+                self.receiveDragonCapsules()
             } catch {
                 print("error:\(error)")
             }
@@ -49,34 +72,49 @@ class FirstViewController: UIViewController {
         
         taskCapsule.resume()
         taskCore.resume()
+        taskDragonCapsule.resume()
     }
 }
 
 extension FirstViewController {
-    private func receiveCapsule() {
+    private func receiveCapsules() {
         if let capsules = self.capsules {
             print("Capsules printing")
             for capsule in capsules {
                 print(capsule)
-                if let missions = capsule.missions {
-                    for mission in missions  {
-                        print(mission)
-                    }
+                for mission in capsule.missions  {
+                    print(mission)
                 }
             }
         }
     }
     
-    private func receiveCore() {
+    private func receiveCores() {
         if let cores = self.cores {
             print("Cores printing")
             for core in cores {
                 print(core)
-                if let missions = core.missions {
-                    for mission in missions  {
-                        print(mission)
-                    }
+                for mission in core.missions  {
+                    print(mission)
                 }
+            }
+        }
+    }
+    
+    private func receiveDragonCapsules() {
+        /*if let dragonCapsules = self.dragonCapsules {
+            print("DragonCapsule printing")
+            for dragon in dragonCapsules {
+                print(dragon.toString())
+            }
+        }*/
+    }
+    
+    private func isCallDone() {
+        self.callDone += 1
+        if self.callDone == self.numberOfCall {
+            DispatchQueue.main.async {
+                self.waitingProgress.stopAnimating()
             }
         }
     }
